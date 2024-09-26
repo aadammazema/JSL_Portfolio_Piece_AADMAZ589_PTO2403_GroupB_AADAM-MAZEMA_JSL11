@@ -31,15 +31,15 @@ export const patchTask = (id, updates) => {
   return tasks; // Optionally return the updated tasks list for further processing
 };
 
-export const putTask = (id, updatedTask) => {
-  const tasks = getTasks();
-  const taskIndex = tasks.findIndex((task) => task.id === id);
-  if (taskIndex > -1) {
-    tasks[taskIndex] = updatedTask;
-    saveTasks(tasks);
-  }
-  location.reload(); // Or better, re-render tasks without reloading
-};
+// export const putTask = (id, updatedTask) => {
+//   const tasks = getTasks();
+//   const taskIndex = tasks.findIndex((task) => task.id === id);
+//   if (taskIndex > -1) {
+//     tasks[taskIndex] = updatedTask;
+//     saveTasks(tasks);
+//   }
+//   location.reload(); // Or better, re-render tasks without reloading
+// };
 
 export const deleteTask = (id) => {
   const tasks = getTasks();
